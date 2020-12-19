@@ -4,6 +4,7 @@
 ```
 npm install
 ```
+Also clone https://github.com/Keno991/undabot-assignment-api repo, and run API in order to be able to use all functionalities
 
 ### Compiles and hot-reloads for development
 ```

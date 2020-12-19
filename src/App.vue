@@ -7,7 +7,7 @@
     <router-view />
     <!-- Footer -->
     <footer>
-      <span>All rights reserved by <b>Kenan Muhic</b></span>
+      <span>Undabot Assignment done by <b>Kenan Muhic</b></span>
       <i class="fab fa-github"></i>
     </footer>
   </div>

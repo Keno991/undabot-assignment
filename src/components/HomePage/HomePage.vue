@@ -2,10 +2,10 @@
   <main>
     <!-- Header -->
     <header>
-      <h2>Undabot Assignment Home Page</h2>
+      <h2>Home Page</h2>
     </header>
 
-    <!-- Hero -->
+    <!-- Main Section -->
     <section class="flex-container">
       <div class="custom-text">
         <p class="first-paragraph">
@@ -31,7 +31,7 @@
         </p>
       </div>
       <div class="custom-image">
-        <img class="zagreb-image" src="../assets/zagreb.jpg" />
+        <img class="zagreb-image" src="../../assets/zagreb.jpg" />
       </div>
     </section>
   </main>
@@ -39,69 +39,8 @@
 
 <script>
 export default {
-  name: "HomePage",
-  props: {
-    msg: String,
-  },
+  name: "HomePage"
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-main,
-header,
-section,
-footer {
-  margin: 0;
-}
-
-footer {
-  position: fixed;
-}
-
-main {
-  padding: 0 60px;
-}
-
-section {
-  padding: 20px 0;
-}
-
-.first-paragraph {
-  margin-top: 0;
-}
-
-.flex-container {
-  display: flex;
-}
-.custom-text {
-  text-align: justify;
-  flex-grow: 1;
-  flex-basis: 0;
-  padding-right: 20px;
-}
-.custom-image {
-  flex-grow: 0.7;
-  flex-basis: 0;
-}
-.zagreb-image {
-  width: 100%;
-  max-width: 600px;
-}
-
-@media screen and (max-width: 1024px) {
-  .flex-container {
-    flex-direction: column;
-  }
-
-  .custom-text {
-    padding-right: initial;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  main {
-    padding: 0 10px;
-  }
-}
-</style>
+<style scoped src="./HomePage.css"></style>
