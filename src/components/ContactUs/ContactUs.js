@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const GENERIC_ERROR = "Something went wrong!";
+
 const adjustTextarea = (event) => {
     event.target.style.height = "20px";
     event.target.style.height = event.target.scrollHeight + "px";
@@ -12,10 +14,13 @@ async function sendContactData() {
     try {
         response = await axios.post('/api/contact', this.form);
     } catch (error) {
-        console.log(error)
-        error.response.data.errors.forEach((error) => {
-            this.errorResponseMessages.push(error.message);
-        })
+        if (error.response.data.errors) {
+            error.response.data.errors.forEach((error) => {
+                this.errorResponseMessages.push(error.message);
+            })
+        } else {
+            this.errorResponseMessages.push(GENERIC_ERROR);
+        }
     }
     this.responseMessages = response.data.message
 }
